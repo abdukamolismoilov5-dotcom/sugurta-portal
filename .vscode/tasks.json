@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start Sugurta Server",
+			"type": "shell",
+			"command": "$health = curl.exe --silent --output NUL --write-out '%{http_code}' http://localhost:5000/; if ($health -eq '200') { Write-Output 'Sugurta serveri allaqachon ishga tushgan: http://localhost:5000'; exit 0 }; npm start",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
